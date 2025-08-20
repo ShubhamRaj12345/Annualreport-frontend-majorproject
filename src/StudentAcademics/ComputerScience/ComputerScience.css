@@ -1,0 +1,582 @@
+.admin-home-container1 {
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+/* ==== Form Styling ==== */
+.student-form{
+  display: flex;
+  margin-top: 3%;
+  justify-content: space-between;
+}
+
+.student-form1 {
+  background-color: #fff;
+  /* background-color: red; */
+  padding: 24px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* max-width: 600px; */
+  width: 68%;
+  max-height: 400px;
+}
+
+
+
+.student-form1 input,
+.student-form1 select {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.student-form1 input:focus,
+.student-form1 select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.student-form1 button {
+  margin-top: 15px;
+  margin-right: 5px;
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.student-form1 button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+/* ==== student form 2 ==== */
+
+.student-form2 {
+  background-color: #fff;
+
+  padding: 24px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* max-width: 600px; */
+  width: 30%;
+}
+
+.student-form2 input,
+.student-form2 select {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.student-form2 input:focus,
+.student-form2 select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.student-form2 button {
+  margin-top: 15px;
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.student-form2 button:hover {
+  background-color: #0056b3;
+}
+
+/* ==== Upload Button ==== */
+.upload-btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+  background-color: #218838;
+}
+
+.hidden-file {
+  display: none;
+}
+
+/* ==== Semester & Students Section ==== */
+.student-list1 {
+  margin-top: 40px;
+}
+
+.student-list1 button {
+  margin: 6px 6px 12px 0;
+  padding: 10px 14px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.student-list1 button:hover {
+  background-color: #5a6268;
+}
+
+.semester-container {
+  margin-top: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  /* REMOVE SCROLL AND HEIGHT */
+  max-height: none;
+  overflow: visible;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e0e0e0;
+}
+
+.semester-container h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* ==== Layout for Students and Chart ==== */
+.semester-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.student-list-container,
+.graph-container {
+  flex: 1;
+  min-width: 320px;
+}
+
+/* Only scrollable list will scroll */
+.scrollable-list {
+  max-height: 450px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.scrollable-list h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.scrollable-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scrollable-list th,
+.scrollable-list td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.scrollable-list th {
+  background-color: #f1f1f1;
+}
+
+
+/* == this is a graph css=== */
+/* .graph-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: visible;
+
+  max-width: 380px;
+  max-height: 380px;
+
+
+  margin-top: -20px;
+}
+
+.graph-container h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.graph-container canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+ */
+
+.graph-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: visible;
+
+  /* Bigger graph size */
+  max-width: 460px;
+  max-height: 460px;
+
+  /* Slight upward margin */
+  margin-top: -10px;
+  margin-bottom: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+.graph-container:hover {
+  transform: translateY(-4px);
+}
+
+.graph-container h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  text-align: center;
+}
+
+.graph-container canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Optional: Adjust layout for mobile screens */
+@media (max-width: 600px) {
+  .graph-container {
+    max-width: 100%;
+    padding: 20px;
+    margin-top: 0;
+  }
+
+  .graph-container h4 {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .semester-content {
+    flex-direction: column;
+  }
+}
+
+/* for notification */
+.toast-message {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+  animation: bounceIn 0.4s ease, fadeOut 3s ease 2.5s forwards;
+}
+
+.toast-message.success {
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+}
+
+.toast-message.error {
+  background: linear-gradient(135deg, #f85032, #e73827);
+}
+
+.toast-icon {
+  font-size: 20px;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+}
+
+.toast-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+.toast-close {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.toast-close:hover {
+  transform: scale(1.2);
+}
+
+/* Bounce-in animation */
+@keyframes bounceIn {
+  0% {
+    transform: translateX(100%) scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(-10px) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Auto fade-out after delay */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+
+/* for download template  */
+
+
+/* CSV Templates Section - Clean Version */
+/* .csv-templates {
+  margin-top: 20px;
+}
+
+.csv-templates h4 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.template-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.template-download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.template-download-btn:hover {
+  background-color: #3a5a8f;
+  transform: translateY(-2px);
+}
+
+.download-icon {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .template-buttons-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .template-download-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+ */
+
+
+ .csv-templates {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f9fbfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.csv-templates h4 {
+  margin-bottom: 20px;
+  color: #2a2a2a;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.template-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  justify-items: center;
+}
+
+.template-download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #4a6fa5, #3a5a8f);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+}
+
+.template-download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.download-icon {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+  .template-buttons-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .template-download-btn {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .template-buttons-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .template-download-btn {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+.session-select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+
+
+
+.graph-container h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  
+
+} 
+
+ 
+
+
+
+
+
+
+
+
+/* Annual Graph Styles */
+.annual-graph-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.annual-graph-container h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.chart-wrapper {
+  height: 400px;
+  position: relative;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .chart-wrapper {
+    height: 300px;
+  }
+  
+  .annual-graph-container {
+    padding: 15px;
+  }
+}

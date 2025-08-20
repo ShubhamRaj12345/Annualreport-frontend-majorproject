@@ -1,0 +1,290 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #ebece9;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  /* Header */
+  header {
+    width: 100%;
+    background-color: #003366;
+    color: white;
+    height: 10vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    width: 100%;
+    background-color: #0055aa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    position: fixed; /* Keeps navbar at the top */
+    top: 10vh; /* Position it below the header */
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure full width without causing overflow */
+  }
+  
+  /* Left side navigation (for links) */
+  .nav-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1; /* Take up the remaining space */
+  }
+  
+  .nav-left a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for links */
+  .nav-left a:hover {
+    color: #ffc107; /* Change color on hover */
+  }
+ 
+  
+  /* Footer */
+  footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: static;
+    width: 100vw;
+ 
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    /* Stack navbar items vertically on mobile */
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px; /* Reduce padding for mobile */
+    }
+  
+    /* Align navbar items to the left and adjust margin */
+    .nav-left {
+      width: 100%; /* Full width on smaller screens */
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-left a {
+      margin: 10px 0; /* Add spacing between links */
+      font-size: 1.2rem; /* Adjust font size */
+    }
+  
+    /* Adjust font size for better readability */
+    nav {
+      font-size: 1.2rem; /* Slightly smaller font for mobile */
+    }
+  
+    /* Optional: Adjust header height for mobile */
+    header {
+      height: 8vh; /* Make header shorter on small screens */
+    }
+  }
+  
+  /* Large Mobile Devices (like tablets in portrait mode) */
+  @media (max-width: 1024px) {
+    nav {
+      font-size: 1.3rem; /* Adjust font size for medium devices */
+    }
+  }
+
+  
+.academics-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #010509;
+}
+
+
+.session-selector-container {
+  margin-bottom: 2rem;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.session-select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.current-session {
+  margin-top: 0.5rem;
+  color: #555;
+  font-style: italic;
+}
+
+.student-list1 {
+  margin-top: 2rem;
+}
+
+.semester-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.semester-buttons button {
+  padding: 0.5rem 1rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.semester-buttons button:hover {
+  background-color: #cfd8dc;
+}
+
+.semester-buttons .active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.semester-container {
+  margin-top: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.semester-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.student-list-container,
+.graph-container {
+  flex: 1;
+  min-width: 280px;
+}
+
+.scrollable-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  background-color: #fefefe;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+thead th {
+  background-color: #e3f2fd;
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+tbody td {
+  padding: 0.4rem;
+  border-bottom: 1px solid #eee;
+}
+
+.pass {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.fail {
+  color: #FF6347;
+  font-weight: bold;
+}
+
+.no-data {
+  color: #999;
+  font-style: italic;
+  padding: 1rem;
+}
+
+.chart-wrapper {
+  height: 300px;
+  padding: 1rem;
+  background-color: #fafafa;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.annual-performance {
+  margin-top: 3rem;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.bar-chart-wrapper {
+  height: 400px;
+  margin-top: 1rem;
+}
+
+
+.filter-container {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-select {
+  padding: 8px;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.current-session {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #333;
+}
