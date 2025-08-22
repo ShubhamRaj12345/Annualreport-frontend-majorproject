@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 
 import Dashboard from './components/Dashboard';
 import Research from './components/Research';
@@ -24,10 +24,10 @@ function App() {
   
 
   return (
-    <Router>
+    
+    <BrowserRouter>
       <div className="app">
     
-
         {/* Routes */}
         <Routes>
           <Route path="/" element={<Dashboard />} />
@@ -43,14 +43,13 @@ function App() {
           <Route path="/academics" element={<Academics />} />
           <Route path="/infrastructure" element={<Infrastructure />} />
 
-    
-
           
         </Routes>
 
         {/* <Footer /> */}
       </div>
-    </Router>
+
+    </BrowserRouter>
   );
 }
 
