@@ -14,6 +14,10 @@ import Academics from './components/Academics';
 import ComputerScience from './StudentAcademics/ComputerScience/ComputerScience';
 import Mechanical from './StudentAcademics/Mechanical/Mechanical';
 import Infrastructure from './components/Infrastructure';
+import Researchad from './Researchadmin/Researchad';
+import BudgetAllocation from './Finance/BudgetAllocation';
+import ExpenseSummary from './Finance/ExpenseSummary';
+import FeeScholarship from './Finance/FeeScholership';
 
 
 
@@ -42,6 +46,12 @@ function App() {
           <Route path="/admin-home1" element={<AdminHome1/>} />
           <Route path="/academics" element={<Academics />} />
           <Route path="/infrastructure" element={<Infrastructure />} />
+            <Route path="/researchad" element={<Researchad />} />
+
+            
+             <Route path="/budgetallocation" element={<BudgetAllocation/>} />
+              <Route path="/expensesummary" element={<ExpenseSummary/>} />
+               <Route path="/feescholer" element={<FeeScholarship/>} />
 
           
         </Routes>

@@ -39,7 +39,32 @@ const AdminHome1 = () => {
     setOptionType(type);
     setSubOption('');
     setSelectedBranch('');
+     if (mainCat === 'Research' && type === 'Department') {
+    navigate('/researchad');
+
+     }
+// Finance → Department
+  if (mainCat === 'Finance' && type === 'Department') {
+    navigate('/budgetallocation');
+  }
+
+  // Finance → Student Placement
+  if (mainCat === 'Finance' && type === 'Expense') {
+    navigate('/expensesummary');
+  }
+  
+  // Finance → Student Placement
+  if (mainCat === 'Finance' && type === 'Fee') {
+    navigate('/feescholer');
+  }
+
   };
+
+
+
+
+
+
 
   const handleOptionSelection = (option, e) => {
     e.preventDefault();
@@ -110,14 +135,51 @@ const AdminHome1 = () => {
 
         {!mainCategory && (
           <>
-            <div className="dropdown">
+            {/* <div className="dropdown">
               <button type="button" className="session-link">Finance</button>
               <div className="dropdown-content">
                 <a href="#" onClick={(e) => { e.preventDefault(); handleCategorySelection('Finance', 'Department'); }}>Budget Allocation & Utilization</a>
                 <a href="#" onClick={(e) => { e.preventDefault(); handleCategorySelection('Finance', 'Student Placement'); }}>Fee Structure & Scholarship</a>
                 <a href="#" onClick={(e) => { e.preventDefault(); handleCategorySelection('Finance', 'Student Placement'); }}>Expense Summary</a>
               </div>
-            </div>
+            </div> */}
+
+
+
+
+            <div className="dropdown">
+  <button type="button" className="session-link">Finance</button>
+  <div className="dropdown-content">
+    <a 
+      href="#" 
+      onClick={(e) => { 
+        e.preventDefault(); 
+        handleCategorySelection('Finance', 'Department'); 
+      }}
+    >
+      Budget Allocation & Utilization
+    </a>
+    <a 
+      href="#" 
+      onClick={(e) => { 
+        e.preventDefault(); 
+        handleCategorySelection('Finance', 'Expense'); 
+      }}
+    >
+      Fee Structure & Scholarship
+    </a>
+    <a 
+      href="#" 
+      onClick={(e) => { 
+        e.preventDefault(); 
+        handleCategorySelection('Finance', 'Fee'); 
+      }}
+    >
+      Expense Summary
+    </a>
+  </div>
+</div>
+
             <div className="dropdown">
               <button type="button" className="session-link">Research</button>
               <div className="dropdown-content">
